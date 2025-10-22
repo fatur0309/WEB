@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal Instansi — Login</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <meta name="description" content="Template Website Pemerintahan - sederhana, responsif, dan siap dikembangkan.">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="Lambang Instansi" width="40" height="40" />
+      <span>Portal Instansi</span>
+    </a>
+    <button class="nav-toggle" aria-label="Buka navigasi" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" class="site-nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="data.html">Data & Layanan</a>
+      <a href="login.html" class="btn btn-outline">Login</a>
+    </nav>
+  </div>
+</header>
+<main class="site-main">
+
+<section class="section narrow">
+  <div class="container">
+    <h1>Masuk ke Portal</h1>
+    <p>Gunakan kredensial yang telah terdaftar. Jika mengalami kendala, hubungi admin.</p>
+    <form class="form-card" action="#" method="post" onsubmit="return fakeLogin(event)">
+      <div class="form-group">
+        <label for="nip">NIP / Email</label>
+        <input id="nip" name="nip" type="text" placeholder="contoh: 1978xxxx atau nama@instansi.go.id" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Kata Sandi</label>
+        <input id="password" name="password" type="password" placeholder="••••••••" required minlength="6" />
+      </div>
+      <div class="form-group inline">
+        <label><input type="checkbox" name="remember" /> Ingat saya</label>
+        <a class="link" href="#">Lupa kata sandi?</a>
+      </div>
+      <button class="btn" type="submit">Login</button>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Tentang</h4>
+      <p>Template situs pemerintahan untuk demonstrasi struktur halaman dan komponen UI dasar.</p>
+    </div>
+    <div>
+      <h4>Tautan</h4>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="data.html">Data & Layanan</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <p>Jl. Contoh No. 123, Makassar<br/>Telp: (0411) 123456</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© 2025 Portal Instansi. Template bebas digunakan untuk pembelajaran.</small>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

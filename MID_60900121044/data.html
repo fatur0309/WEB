@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal Instansi — Data & Layanan</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <meta name="description" content="Template Website Pemerintahan - sederhana, responsif, dan siap dikembangkan.">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="Lambang Instansi" width="40" height="40" />
+      <span>Portal Instansi</span>
+    </a>
+    <button class="nav-toggle" aria-label="Buka navigasi" aria-expanded="false" aria-controls="site-nav">☰</button>
+    <nav id="site-nav" class="site-nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="data.html">Data & Layanan</a>
+      <a href="login.html" class="btn btn-outline">Login</a>
+    </nav>
+  </div>
+</header>
+<main class="site-main">
+
+<section class="section">
+  <div class="container">
+    <h1>Data Layanan Publik</h1>
+    <p>Rekapitulasi permohonan layanan bulan berjalan.</p>
+
+    <div class="table-wrapper">
+      <table class="table" aria-describedby="caption-data">
+        <caption id="caption-data">Tabel 1. Rekapitulasi Permohonan Layanan</caption>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nomor Permohonan</th>
+            <th>Nama Pemohon</th>
+            <th>Jenis Layanan</th>
+            <th>Tanggal</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-data">
+          <tr>
+            <td>1</td><td>LP-001</td><td>Faturrachman Yunus</td><td>Perizinan</td><td>2025-10-01</td><td>Selesai</td>
+          </tr>
+          <tr>
+            <td>2</td><td>LP-002</td><td>FRY</td><td>Informasi Publik</td><td>2025-10-03</td><td>Proses</td>
+          </tr>
+          <tr>
+            <td>3</td><td>LP-003</td><td>UINAM</td><td>Non-Perizinan</td><td>2025-10-07</td><td>Ditolak</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="mt">Formulir Permohonan</h2>
+    <p>Isi formulir berikut untuk mengajukan permohonan layanan. Pastikan data yang Anda masukkan benar.</p>
+
+    <form class="form-card" id="form-layanan" onsubmit="return tambahData(event)">
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="nomor">Nomor Permohonan</label>
+          <input id="nomor" name="nomor" type="text" placeholder="mis. LP-004" required />
+        </div>
+        <div class="form-group">
+          <label for="nama">Nama Pemohon</label>
+          <input id="nama" name="nama" type="text" placeholder="Nama lengkap" required />
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="jenis">Jenis Layanan</label>
+          <select id="jenis" name="jenis" required>
+            <option value="">-- pilih --</option>
+            <option>Perizinan</option>
+            <option>Non-Perizinan</option>
+            <option>Informasi Publik</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="tanggal">Tanggal</label>
+          <input id="tanggal" name="tanggal" type="date" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <legend>Status</legend>
+          <label><input type="radio" name="status" value="Proses" required /> Proses</label>
+          <label><input type="radio" name="status" value="Selesai" /> Selesai</label>
+          <label><input type="radio" name="status" value="Ditolak" /> Ditolak</label>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <label for="keterangan">Keterangan</label>
+        <textarea id="keterangan" name="keterangan" rows="3" placeholder="Tambahkan catatan jika diperlukan"></textarea>
+      </div>
+      <button class="btn" type="submit">Kirim</button>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h4>Tentang</h4>
+      <p>Template situs pemerintahan untuk demonstrasi struktur halaman dan komponen UI dasar.</p>
+    </div>
+    <div>
+      <h4>Tautan</h4>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="data.html">Data & Layanan</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <p>Jl. Contoh No. 123, Makassar<br/>Telp: (0411) 123456</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small>© 2025 Portal Instansi. Template bebas digunakan untuk pembelajaran.</small>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
